@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/empty_list_text_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#E4E4E4"
+        android:gravity="center"
+        android:text="List1 is Empty!"
+        android:textSize="17sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/empty_list_text_view_1" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view_1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/empty_list_text_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#E4E4E4"
+        android:gravity="center"
+        android:text="List2 is Empty!"
+        android:textSize="17sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view_2"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
